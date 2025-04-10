@@ -65,7 +65,8 @@ until false; do
       echo "no $partition config found"
     fi
   }
-  if ls /dev/i2c-1; then 
+  if ls /dev/i2c-1; then
+    : # This is a null command that does nothing
     # echo $(ls /dev/*i2c*)
     # echo "Found i2c access!";
     # echo "Loading C Script for UCTRONICS OLED...";
