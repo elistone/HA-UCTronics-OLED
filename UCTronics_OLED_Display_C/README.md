@@ -10,11 +10,14 @@ Special thanks to [DC Walter](https://github.com/dcwalter) for fixing the code t
 
 ## Install Guide
 
-### First Step
+### First Steps
 1. Install
-1. Disable "Protection mode"
-1. Start the addon, this will allow Adam's script to enable I2C interface.
-1. Reboot Twice! 
+2. Disable "Protection mode"
+3. Start the addon, this will allow Adam's script to enable I2C interface.
+4. Reboot the system (make sure the system is fully rebooted)
+5. Start the addon again - if it did not start automatically.
+6. Reboot the system again (yes, twice)
+7. Stop the addon - 
 
 ### Second Step.
 1. Re-enable "Protection mode"
