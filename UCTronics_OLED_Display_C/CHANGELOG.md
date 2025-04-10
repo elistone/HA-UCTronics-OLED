@@ -1,4 +1,7 @@
 # Changelog
+## [2025.04.10.001] - Resolving start issues
+- Fixing an issue prevent the `run.sh` script from running properly.
+
 ## [2024.09.29.003] - Update to latest HA
 - Removed Python from project.
 - Fixing typos
