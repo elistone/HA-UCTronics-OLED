@@ -3,6 +3,8 @@
 - Fixing an issue with the `run.sh` script not being found.
 - Fixing an issue with `run.sh` not being happy about empty else.
 - Updating `run.sh` to latest version.
+- Updating `config.json`
+- Adjusting `apparrmor.txt`
 
 ## [2024.09.29.003] - Update to latest HA
 - Removed Python from project.

@@ -10,17 +10,17 @@ Special thanks to [DC Walter](https://github.com/dcwalter) for fixing the code t
 
 ## Install Guide
 
-### First Steps
-1. Install
-2. Disable "Protection mode"
-3. Start the addon, this will allow Adam's script to enable I2C interface.
-4. Reboot the system (make sure the system is fully rebooted)
-5. Start the addon again - if it did not start automatically.
-6. Reboot the system again (yes, twice)
-7. Stop the addon - 
+### Phase 1: Setup I2C Interface
+1. Install the addon from the Home Assistant Add-on Store
+2. Disable "Protection mode" in the addon configuration
+3. Start the addon to initialize the I2C interface configuration
+4. Restart your Home Assistant system completely
+5. Wait for the system to fully boot, then verify the addon has started automatically (if not, start it manually)
+6. Restart your Home Assistant system again (this second reboot is required to complete I2C initialization)
+7. After the second reboot completes, stop the addon
 
-### Second Step.
-1. Re-enable "Protection mode"
-1. Start the addon
-1. Check the "Log" and see if there are any error.
-1. Your OLED should be displaying.
+### Phase 2: Normal Operation
+1. Re-enable "Protection mode" in the addon configuration for improved security
+2. Start the addon
+3. Check the "Logs" tab for any error messages
+4. If no errors appear, your UCTRONICS OLED display should now be functioning

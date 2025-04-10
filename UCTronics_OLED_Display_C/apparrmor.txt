@@ -2,7 +2,7 @@
 
 profile uctronics_oled_display flags=(attach_disconnected,mediate_deleted) {
   #include <abstractions/base>
-  
+
   capability,
   file,
   mount options=(user,rw,noatime) /dev/sda1,
@@ -21,17 +21,18 @@ profile uctronics_oled_display flags=(attach_disconnected,mediate_deleted) {
   capability dac_override,
 
   # S6-Overlay
-  /init ix,
   /bin/** ix,
   /usr/bin/** ix,
-  /run/{s6,s6-rc*,service}/** ix,
-  /package/** ix,
-  /command/** ix,
+  /usr/lib/bashio/** ix,
+  /etc/s6/** rix,
+  /run/s6/** rix,
   /etc/services.d/** rwix,
   /etc/cont-init.d/** rwix,
   /etc/cont-finish.d/** rwix,
-  /run/{,**} rwk,
-  /dev/tty rw,
+  /init rix,
+  /var/run/** mrwkl,
+  /var/run/ mrwkl,
+  /proc/self/attr/** mrwkl,
   # Files required
   /dev/sda1 mrwkl,
   /dev/sda2 mrkwl,
@@ -42,14 +43,14 @@ profile uctronics_oled_display flags=(attach_disconnected,mediate_deleted) {
   /dev/* mrwkl,
   /tmp/* mrwkl,
   /tmp/ mrkwl,
-  
+
   # Data access
   /data/** rw,
 
 
   # suppress ptrace denials when using 'docker ps' or using 'ps' inside a container
   ptrace (trace,read) peer=docker-default,
- 
+
   # docker daemon confinement requires explict allow rule for signal
   signal (receive) set=(kill,term) peer=/usr/bin/docker,
 
