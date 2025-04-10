@@ -29,7 +29,7 @@ if [ "$DISABLE_AUTO_START" = false ]; then
         fi
     else
         bashio::log.info "Attempting to set up i2c access!";
-        exec ./run.sh
+        exec /run.sh
     fi 
 else
     bashio::log.info "No Auto Run"
