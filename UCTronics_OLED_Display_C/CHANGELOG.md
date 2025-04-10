@@ -1,6 +1,7 @@
 # Changelog
-## [2025.04.10.002] - Resolving start issues
+## [2025.04.10.003] - Resolving start issues
 - Fixing an issue with the `run.sh` script not being found.
+- Fixing an issue with `run.sh` not being happy about empty else.
 
 ## [2024.09.29.003] - Update to latest HA
 - Removed Python from project.
